@@ -17,61 +17,46 @@ import com.example.playgirl.mvp.utlis.CityInfo;
 
 import java.util.ArrayList;
 
-public class AddCityActivity extends AppCompatActivity implements ViewContent, View.OnClickListener{
-
-
+public class AddCityActivity extends AppCompatActivity
+    implements ViewContent, View.OnClickListener {
     private EditText edtId, edtName, edtPopulation;
     private Button btnAdd;
     private RecyclerView recyclerView;
     private PresenterLogicContent presenterLogicContent;
-
     private ArrayList<CityInfo> listCityInfos = new ArrayList<>();
+    private ShowCityAdapter showCityAdapter;
 
-    private  ShowCityAdapter showCityAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_city);
-
         init();
-
-
-        presenterLogicContent = new PresenterLogicContent(this,this);
-
+        presenterLogicContent = new PresenterLogicContent(this, this);
         listCityInfos.addAll(presenterLogicContent.getListCity());
-
-
-        showCityAdapter = new ShowCityAdapter(listCityInfos,this);
-
-
+        showCityAdapter = new ShowCityAdapter(listCityInfos, this);
         recyclerView.setAdapter(showCityAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this
         ));
-
         btnAdd.setOnClickListener(this);
     }
 
     private void init() {
-
         recyclerView = findViewById(R.id.recy);
         edtId = (EditText) findViewById(R.id.edt_id);
         edtName = findViewById(R.id.edt_city_name);
         edtPopulation = findViewById(R.id.edt_count);
-
         btnAdd = findViewById(R.id.btn_add);
-
     }
-
 
     @Override
     public void onClick(View view) {
-        CityInfo cityInfo = new CityInfo(edtId.getText()+"",edtName.getText()+"", edtPopulation.getText()+"");
+        CityInfo cityInfo = new CityInfo(edtId.getText() + "", edtName.getText() + "",
+            edtPopulation.getText() + "");
         presenterLogicContent.addCity(cityInfo);
     }
 
     @Override
     public void addSuccess() {
-
     }
 
     @Override

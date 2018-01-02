@@ -5,8 +5,6 @@ package com.example.playgirl.mvp.login;
  */
 //
 public interface ViewLogin {
-
-     void loginSuccess();
-     void loginFail();
-
+    void loginSuccess();
+    void loginFail();
 }

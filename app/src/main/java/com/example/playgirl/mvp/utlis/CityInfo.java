@@ -6,17 +6,12 @@ import io.realm.annotations.PrimaryKey;
 /**
  * Created by playgirl on 1/2/18.
  */
-
-public class CityInfo extends RealmObject{
-
+public class CityInfo extends RealmObject {
     private String id;
-
     private String name;
     private String Populat;
 
-
-    public CityInfo( ) {
-
+    public CityInfo() {
     }
 
     public CityInfo(String id, String name, String populat) {

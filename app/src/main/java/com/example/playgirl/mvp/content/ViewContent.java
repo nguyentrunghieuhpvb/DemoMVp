@@ -7,11 +7,7 @@ import java.util.ArrayList;
 /**
  * Created by playgirl on 1/2/18.
  */
-
 public interface ViewContent {
-
     void addSuccess();
-
     void showAll(ArrayList<CityInfo> listCityInfos);
-
 }

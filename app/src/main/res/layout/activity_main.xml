@@ -1,40 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
     <EditText
 
-        android:hint="userName"
+        android:id="@+id/edt_user_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/edt_user_name"/>
+        android:hint="userName"/>
+
     <EditText
-        android:hint="passWord"
+        android:id="@+id/edt-password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/edt_user_name"
         android:layout_marginTop="20dp"
-        android:id="@+id/edt-password"/>
+        android:hint="passWord"/>
 
     <Button
+        android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnLogin"
-        android:text="login"
         android:layout_below="@+id/edt-password"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="30dp"
+        android:text="login"/>
 
 
     <LinearLayout
         android:id="@+id/ll_option"
-        android:visibility="invisible"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnLogin"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        android:visibility="invisible">
+
         <Button
             android:id="@+id/btn_add_city"
             android:layout_width="wrap_content"
@@ -42,10 +44,10 @@
             android:text="add city"/>
 
         <Button
-            android:layout_marginLeft="20dp"
-            android:text="show City"
+            android:id="@+id/btn_show_city"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btn_show_city"/>
+            android:layout_marginLeft="20dp"
+            android:text="show City"/>
     </LinearLayout>
 </RelativeLayout>

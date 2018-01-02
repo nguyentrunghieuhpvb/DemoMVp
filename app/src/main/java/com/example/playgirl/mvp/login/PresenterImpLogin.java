@@ -5,7 +5,5 @@ package com.example.playgirl.mvp.login;
  */
 //
 public interface PresenterImpLogin {
-
     public void checkLogin(String userName, String p);
-
 }

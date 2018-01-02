@@ -1,4 +1,4 @@
-package login;
+package com.example.playgirl.mvp.login;
 
 /**
  * Created by playgirl on 1/2/18.

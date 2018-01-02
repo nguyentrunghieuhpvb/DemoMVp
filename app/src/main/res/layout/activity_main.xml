@@ -27,4 +27,25 @@
         android:layout_below="@+id/edt-password"
         android:layout_marginTop="30dp"/>
 
+
+    <LinearLayout
+        android:id="@+id/ll_option"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnLogin"
+        android:layout_marginTop="20dp">
+        <Button
+            android:id="@+id/btn_add_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="add city"/>
+
+        <Button
+            android:layout_marginLeft="20dp"
+            android:text="show City"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_show_city"/>
+    </LinearLayout>
 </RelativeLayout>
